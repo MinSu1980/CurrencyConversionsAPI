@@ -16,7 +16,7 @@ public class HistoricalConversionTests extends BaseTest {
     public void historicalValidDateTest() {
         Response response = given()
                 .queryParam("apikey", Consts.API_KEY)
-                .queryParam("date", "2018-01-01")
+                .queryParam("date", "2026-03-03")
                 .queryParam("currencies", "CAD,EUR,RUB")
                 .get(Consts.HISTORICAL_ENDPOINT);
 
@@ -36,7 +36,7 @@ public class HistoricalConversionTests extends BaseTest {
     public void historicalOneCurrencyTest() {
         Response response = given()
                 .queryParam("apikey", Consts.API_KEY)
-                .queryParam("date", "2018-01-01")
+                .queryParam("date", "2026-03-03")
                 .queryParam("currencies", "EUR")
                 .get(Consts.HISTORICAL_ENDPOINT);
 
@@ -72,7 +72,7 @@ public class HistoricalConversionTests extends BaseTest {
     public void historicalInvalidDateTest() {
         Response response = given()
                 .queryParam("apikey", Consts.API_KEY)
-                .queryParam("date", "2025-99-99")
+                .queryParam("date", "2026-13-13")
                 .get(Consts.HISTORICAL_ENDPOINT);
 
         System.out.println(response.asString());

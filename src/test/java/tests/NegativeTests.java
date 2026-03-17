@@ -25,7 +25,7 @@ public class NegativeTests extends BaseTest {
                 .body("success", equalTo(false));
     }
     @Test
-    public void noaKeyTest() {
+    public void noKeyTest() {
         Response response = given()
                 .queryParam("currencies", "EUR")
                 .queryParam("base", "USD")
